@@ -25,127 +25,146 @@
 <meta name="twitter:image" content="https://reperez.com/assets/og-image.png">
 <title>Re Perez — Build a Category of One Brand</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=EB+Garamond:wght@400;500&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--black:#000;--espresso:#000000;--gold:#d8b478;--sand:#CFC6BA;--white:#fff;--hair:rgba(216,180,120,0.28);}
+  /* Category of One Branding — Web Brand Guidelines v2 (Oct 2026), on a black page */
+  :root{
+    --black:#000;--white:#fff;
+    --brown:#A07F56;        /* accent: emphasis words, labels on black, rules */
+    --deep:#7E6243;         /* primary button fill */
+    --text:rgba(255,255,255,.88);
+    --mute:rgba(255,255,255,.66);
+    --hair:rgba(255,255,255,.16);
+  }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--espresso);color:var(--sand);font-family:"EB Garamond",Georgia,serif;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.8;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:1300px;margin:0 auto;padding:0 56px;}
-  .eyebrow{font-family:"Raleway",sans-serif;font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);}
-  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--white);}
-  em{font-style:italic;color:var(--gold);}
+  html{-webkit-text-size-adjust:100%;}
+  body{background:var(--black);color:var(--text);font-family:"Schibsted Grotesk",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 56px;}
+  h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:var(--white);}
+  h1 em,h2 em{font-style:normal;color:var(--brown);}
+  .eyebrow{font-family:"Schibsted Grotesk",sans-serif;font-size:13.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brown);}
 
-  .nav{display:flex;justify-content:center;align-items:center;padding:24px 56px;position:sticky;top:0;background:var(--espresso);z-index:20;border-bottom:1px solid var(--hair);}
-  .nav img{height:22px;}
+  /* NAV — black bar, logo left */
+  .nav{position:sticky;top:0;z-index:20;background:var(--black);border-bottom:1px solid var(--hair);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:86px;}
+  .nav img{height:24px;width:auto;}
 
   /* HERO */
-  .hero{min-height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:64px 0;}
-  .hero .eyebrow{display:none;}
-  .hero-main{display:contents;}
-  .hero h1{font-size:clamp(54px,7.6vw,120px);font-weight:700;line-height:0.95;letter-spacing:0.02em;text-transform:uppercase;max-width:none;margin:0 auto;}
-  .hero h1 em{font-style:normal;}
-  .hero .sub{margin:30px auto 0;max-width:none;font-size:21px;line-height:1.5;color:var(--white);}
-  .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px;}
-  .hero-stats{display:flex;gap:70px;justify-content:center;flex-wrap:wrap;margin:64px auto 0;padding-top:44px;border-top:1px solid var(--hair);max-width:900px;}
-  .hero-stats .s .n{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--white);font-size:clamp(42px,5vw,64px);line-height:1;}
-  .hero-stats .s .n em{color:var(--gold);font-style:normal;}
-  .hero-stats .s .c{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-top:12px;}
+  .hero{padding:150px 0 120px;text-align:center;}
+  .hero h1{font-size:clamp(54px,7.6vw,109px);line-height:.95;}
+  .hero .sub{font-size:18.7px;font-weight:500;line-height:1.65;color:var(--mute);margin:30px auto 44px;}
+  .hero .sub span{display:block;}
+  .btn{display:inline-block;font-family:"Schibsted Grotesk",sans-serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--white);background:var(--deep);border:1px solid var(--deep);padding:17px 40px;transition:background .2s,color .2s,border-color .2s;}
+  .btn:hover{background:var(--white);color:var(--black);border-color:var(--white);}
 
-  /* TESTIMONIALS */
-  .testi{padding:126px 0;border-top:1px solid var(--hair);}
-  .testi .head{text-align:center;margin-bottom:64px;}
-  .testi .head h2{font-size:clamp(32px,4vw,56px);margin-top:18px;}
-  .testwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:70px 56px;max-width:1200px;margin:0 auto;}
-  .tq{display:flex;flex-direction:column;text-align:left;}
-  .tq .qmark{font-family:"Cormorant Garamond",Georgia,serif;font-size:90px;line-height:0.7;color:var(--gold);margin-bottom:10px;display:block;}
-  .tq blockquote{font-family:"EB Garamond",Georgia,serif;font-style:italic;font-size:21px;line-height:1.55;color:var(--sand);margin-bottom:20px;}
-  .tq .rule{width:24px;height:1px;background:var(--gold);margin-bottom:14px;}
-  .tq .by{font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);}
-  .tq .by span{display:block;margin-top:4px;font-weight:400;font-size:12px;letter-spacing:0.06em;text-transform:none;color:var(--gold);}
+  /* STATS */
+  .stats{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-top:56px;padding-bottom:56px;}
+  .stat{text-align:center;}
+  .stat .n{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:64px;line-height:1;color:var(--white);}
+  .stat .n b{font-weight:600;color:var(--brown);}
+  .stat .l{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-top:14px;}
 
-  .btn{display:inline-block;font-family:"Raleway",sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#111;background:var(--gold);border:1px solid var(--gold);padding:11px 24px;text-decoration:none;transition:background .2s,color .2s,border-color .2s;}
-  .btn:hover{background:#000;color:#fff;border-color:#fff;}
+  /* TESTIMONIALS — CO1 style, inverted for black */
+  .tst{position:relative;overflow:hidden;padding:110px 0 120px;}
+  .tst .glyph{position:absolute;top:18px;left:50%;transform:translateX(-50%);font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:360px;line-height:.6;color:rgba(160,127,86,.2);pointer-events:none;}
+  .tst .head{position:relative;text-align:center;margin-bottom:62px;}
+  .tst .eyebrow{display:block;margin-bottom:18px;}
+  .tst h2{font-size:clamp(38px,4.4vw,63px);line-height:1;}
+  .twall{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .tw{display:flex;flex-direction:column;border:1px solid var(--hair);padding:40px 34px 32px;}
+  .tw .q{font-size:18px;font-weight:500;line-height:1.55;color:var(--text);margin-bottom:28px;flex:1;}
+  .tw .who{display:flex;align-items:center;gap:16px;}
+  .tw .avi{flex:0 0 56px;width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--hair);}
+  .tw .nm{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);line-height:1.6;}
+  .tw .ti{font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--mute);margin-top:4px;line-height:1.6;}
 
-  .footer{border-top:1px solid var(--hair);padding:40px 56px;display:flex;justify-content:space-between;align-items:center;font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--white);}
-  .footer img{height:16px;}
+  /* FOOTER — CO1 footer, no site map */
+  footer{border-top:1px solid var(--hair);}
+  .ft-top{padding:64px 0 48px;}
+  .ft-top img{height:28px;width:auto;margin-bottom:22px;}
+  .ft-top p{font-size:15px;line-height:24px;color:rgba(255,255,255,.72);}
+  .ft-top p span{display:block;}
+  .ft-rule{height:1px;background:var(--hair);}
+  .ft-bot{padding:22px 0 44px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
   /* ---- tablet ---- */
   @media(max-width:900px){
     .wrap{padding:0 24px;}
-    .nav{padding:14px 22px;}
-    .hero{padding:84px 0 54px;}
-    .testi{padding:82px 0;} .testi .head{margin-bottom:44px;}
-    .testwrap{grid-template-columns:repeat(2,1fr);}
+    .nav .wrap{height:68px;}
+    .nav img{height:20px;}
+    .twall{grid-template-columns:1fr 1fr;}
   }
   /* ---- phone ---- */
   @media(max-width:600px){
-    html{-webkit-text-size-adjust:100%;}
-    .wrap{padding:0 20px;}
-    .nav{padding:16px 20px;}
-    .nav img{height:18px;}
-    .hero{min-height:auto;padding:0 0 64px;}
-    .hero-main{display:block;padding:64px 0 52px;}
+    .hero{padding:72px 0 64px;}
     .hero h1{font-size:54px;}
-    .hero .sub{font-size:18px;line-height:1.55;margin-top:26px;}
-    .hero-actions{margin-top:36px;}
-    .hero-actions .btn{display:block;width:100%;max-width:340px;margin:0 auto;padding:17px 20px;font-size:12px;}
-    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:0;padding-top:40px;}
-    .hero-stats .s .n{font-size:32px;}
-    .hero-stats .s .c{font-size:9px;letter-spacing:0.12em;line-height:1.5;margin-top:8px;}
-    .testi{padding:56px 0 64px;}
-    .testi .head{margin-bottom:40px;}
-    .testi .head h2{font-size:32px;margin-top:12px;}
-    .testwrap{grid-template-columns:1fr;gap:44px;}
-    .tq .qmark{font-size:64px;margin-bottom:4px;}
-    .tq blockquote{font-size:19px;line-height:1.5;margin-bottom:16px;}
-    .footer{flex-direction:column;gap:12px;text-align:center;padding:28px 20px 36px;font-size:10px;}
-    .footer img{height:14px;}
+    .hero .sub{font-size:16px;margin:24px auto 34px;}
+    .btn{display:block;width:100%;max-width:360px;margin:0 auto;padding:18px 12px;font-size:12px;letter-spacing:.12em;white-space:nowrap;}
+    .stats .wrap{padding-top:40px;padding-bottom:40px;gap:8px;}
+    .stat .n{font-size:34px;}
+    .stat .l{font-size:9.5px;letter-spacing:.12em;line-height:1.5;margin-top:10px;}
+    .tst{padding:80px 0 84px;}
+    .tst .head{margin-bottom:44px;}
+    .tst h2{font-size:38px;}
+    .twall{grid-template-columns:1fr;gap:18px;}
+    .tw{padding:32px 26px;}
+    .ft-top{padding:48px 0 36px;}
+    .ft-top img{height:24px;}
+    .ft-bot{padding-bottom:44px;}
   }
+  @media(max-width:350px){.btn{font-size:11px;letter-spacing:.08em;}}
 </style>
 </head>
 <body>
-  <div class="nav">
-    <img src="assets/reperez-logo-gold-white.png" alt="Re Perez">
-  </div>
 
-  <!-- HERO -->
-  <header class="hero"><div class="wrap">
-    <div class="hero-main">
-    <p class="eyebrow"><span>Brand Strategy Director</span><span class="dot"> · </span><span>Global Brand Strategist</span></p>
+  <header class="nav"><div class="wrap">
+    <a href="/"><img src="assets/reperez-logo-gold-white.png" alt="Re Perez"></a>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
     <h1>Build a <em>Category of One</em> Brand.</h1>
-    <p class="sub">Most brands compete for attention.<br>I work with the ones that command it.</p>
-    <div class="hero-actions">
-      <a class="btn" href="https://categoryofonebranding.com/" target="_blank" rel="noopener">Visit Category of One Branding &rarr;</a>
-    </div>
-    </div>
-    <div class="hero-stats">
-      <div class="s"><div class="n">25<em>+</em></div><div class="c">Years of Branding Experience</div></div>
-      <div class="s"><div class="n">1,000<em>+</em></div><div class="c">Brand Transformations</div></div>
-      <div class="s"><div class="n">1<em>M+</em></div><div class="c">People Impacted</div></div>
-    </div>
-  </div>
-  </header>
-
-  <!-- TESTIMONIALS -->
-  <section class="testi"><div class="wrap">
-    <div class="head"><p class="eyebrow">Testimonials</p><h2>What people are saying.</h2></div>
-
-    <div class="testwrap">
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>We went from 100 to 2,000 customers — a 1,900% increase after rebranding with Re Perez.</blockquote><div class="rule"></div><div class="by">Justin Berg<span>CEO, Purple Care</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>In just a month after rebranding, we grew 399%. Fast-forward to today, we've nearly 10x'd our business.</blockquote><div class="rule"></div><div class="by">Jon McCarty<span>CEO, Odyssey Test Prep</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>His leadership helped us stand out. Immediately after rebranding, we landed a $1M contract.</blockquote><div class="rule"></div><div class="by">Chris Koomey<span>COO, Thorben</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision Re Perez delivers.</blockquote><div class="rule"></div><div class="by">Angelique Rewers<span>CEO, BoldHaus</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>My go-to oracle when it comes to branding, communications, and business strategy — fundamental in transforming multiple companies I've owned.</blockquote><div class="rule"></div><div class="by">Brent Weaver<span>CEO, E2M Solutions</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>The 8-figure companies that grow every year — it has everything to do with branding. Re Perez has helped many of my friends build powerhouse brands.</blockquote><div class="rule"></div><div class="by">Michael Lovitch<span>Co-Founder, Baby Bathwater Institute</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>He transformed us from a market-limiting brand into an inspirational, people-focused one. Worth every penny.</blockquote><div class="rule"></div><div class="by">Drew Cameron<span>CEO, Flow Odyssey</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>I hired Re Perez as our Fractional Branding Officer. I'll never operate again without a Brand Strategist.</blockquote><div class="rule"></div><div class="by">Dr. Eric J. Roman<span>CEO &amp; Entrepreneur</span></div></div>
-      <div class="tq"><span class="qmark">&#8220;</span><blockquote>The understanding Re Perez had of our business was incredible. Since rebranding, we've tripled in size.</blockquote><div class="rule"></div><div class="by">Adam Hailstone<span>CMO, Williamsburg Learning</span></div></div>
-    </div>
+    <p class="sub"><span>Most brands compete for attention.</span><span>I work with the ones that command it.</span></p>
+    <a class="btn" href="https://categoryofonebranding.com/" target="_blank" rel="noopener">Visit Category of One Branding</a>
   </div></section>
 
-  <div class="footer">
-    <img src="assets/reperez-logo-gold-white.png" alt="Re Perez">
-    <span>© 2026 Re Perez · All Rights Reserved</span>
-  </div>
+  <section class="stats"><div class="wrap">
+    <div class="stat"><div class="n">25<b>+</b></div><div class="l">Years of Branding Experience</div></div>
+    <div class="stat"><div class="n">1,000<b>+</b></div><div class="l">Brand Transformations</div></div>
+    <div class="stat"><div class="n">1M<b>+</b></div><div class="l">People Impacted</div></div>
+  </div></section>
+
+  <section class="tst" id="testimonials">
+    <span class="glyph" aria-hidden="true">&ldquo;</span>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Testimonials</span><h2>What People Are Saying.</h2></div>
+      <div class="twall">
+        <div class="tw"><p class="q">We went from 100 to 2,000 customers — a 1,900% increase after rebranding with Re Perez.</p><div class="who"><img class="avi" src="testimonial-photos/justin-berg.jpg" width="56" height="56" alt="Justin Berg" loading="lazy"><div><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div></div></div>
+        <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast-forward to today, we've nearly 10x'd our business.</p><div class="who"><img class="avi" src="testimonial-photos/jon-mccarty.jpg" width="56" height="56" alt="Jon McCarty" loading="lazy"><div><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div></div></div>
+        <div class="tw"><p class="q">His leadership helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="who"><img class="avi" src="testimonial-photos/chris-koomey.jpg" width="56" height="56" alt="Chris Koomey" loading="lazy"><div><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div></div></div>
+        <div class="tw"><p class="q">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision Re Perez delivers.</p><div class="who"><img class="avi" src="testimonial-photos/angelique-rewers.jpg" width="56" height="56" alt="Angelique Rewers" loading="lazy"><div><div class="nm">Angelique Rewers</div><div class="ti">CEO, BoldHaus</div></div></div></div>
+        <div class="tw"><p class="q">My go-to oracle when it comes to branding, communications, and business strategy — fundamental in transforming multiple companies I've owned.</p><div class="who"><img class="avi" src="testimonial-photos/brent-weaver.jpg" width="56" height="56" alt="Brent Weaver" loading="lazy"><div><div class="nm">Brent Weaver</div><div class="ti">CEO, E2M Solutions</div></div></div></div>
+        <div class="tw"><p class="q">Re Perez and his team created a brand that's traditional enough for Fortune 500 clientele, yet stands out as innovative and forward-thinking. Our newsletter now has a 50% open rate.</p><div class="who"><img class="avi" src="testimonial-photos/andrea-adams.jpg" width="56" height="56" alt="Andrea Adams" loading="lazy"><div><div class="nm">Andrea Adams</div><div class="ti">Founder, Triumpha</div></div></div></div>
+        <div class="tw"><p class="q">The 8-figure companies that grow every year — it has everything to do with branding. Re Perez has helped many of my friends build powerhouse brands.</p><div class="who"><img class="avi" src="testimonial-photos/michael-lovitch.jpg" width="56" height="56" alt="Michael Lovitch" loading="lazy"><div><div class="nm">Michael Lovitch</div><div class="ti">Co-Founder, Baby Bathwater Institute</div></div></div></div>
+        <div class="tw"><p class="q">He transformed us from a market-limiting brand into an inspirational, people-focused one. Worth every penny.</p><div class="who"><img class="avi" src="testimonial-photos/drew-cameron.jpg" width="56" height="56" alt="Drew Cameron" loading="lazy"><div><div class="nm">Drew Cameron</div><div class="ti">CEO, Flow Odyssey</div></div></div></div>
+        <div class="tw"><p class="q">The understanding Re Perez had of our business was incredible. Since rebranding, we've tripled in size.</p><div class="who"><img class="avi" src="testimonial-photos/adam-hailstone.jpg" width="56" height="56" alt="Adam Hailstone" loading="lazy"><div><div class="nm">Adam Hailstone</div><div class="ti">CMO, Williamsburg Learning</div></div></div></div>
+        <div class="tw"><p class="q">I hired Re Perez as our Fractional Branding Officer. I'll never operate again without a Brand Strategist.</p><div class="who"><img class="avi" src="testimonial-photos/eric-roman.jpg" width="56" height="56" alt="Dr. Eric J. Roman" loading="lazy"><div><div class="nm">Dr. Eric J. Roman</div><div class="ti">CEO &amp; Entrepreneur</div></div></div></div>
+        <div class="tw"><p class="q">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="who"><img class="avi" src="testimonial-photos/melanie-merkling.jpg" width="56" height="56" alt="Melanie Merkling" loading="lazy"><div><div class="nm">Melanie Merkling</div><div class="ti">CEO, SoulFire</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap">
+    <div class="ft-top">
+      <a href="/"><img src="assets/reperez-logo-gold-white.png" alt="Re Perez"></a>
+      <p><span>Most brands compete for attention.</span><span>I work with the ones that command it.</span></p>
+    </div>
+    <div class="ft-rule"></div>
+    <div class="ft-bot">&copy; 2026 Re Perez. All Rights Reserved.</div>
+  </div></footer>
+
 </body>
 </html>
