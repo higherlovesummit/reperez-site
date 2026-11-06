@@ -50,7 +50,7 @@
     background:repeating-conic-gradient(from 0deg at 50% 118%,rgba(216,197,156,.13) 0deg .14deg,transparent .14deg 2.2deg);
     -webkit-mask-image:radial-gradient(120% 95% at 50% 118%,#000 15%,rgba(0,0,0,.55) 55%,transparent 88%);mask-image:radial-gradient(120% 95% at 50% 118%,#000 15%,rgba(0,0,0,.55) 55%,transparent 88%);}
   .hero .wrap{position:relative;}
-  .hero .hero-eb{margin-bottom:30px;}
+  .hero .hero-eb{margin-bottom:30px;font-size:14px;color:var(--white);letter-spacing:.26em;}
   .hero h1{font-size:96px;}
   .hero .lede{font-size:21px;line-height:1.6;color:rgba(255,255,255,.86);margin:38px auto 46px;}
   .hero .lede span{display:block;}
@@ -116,7 +116,7 @@
     .nav .wrap{height:72px;} .nav img{height:22px;}
     .hero{padding:96px 0 90px;}
     .hero h1{font-size:44px;}
-    .hero .hero-eb{font-size:10.5px;letter-spacing:.22em;line-height:1.9;margin-bottom:22px;}
+    .hero .hero-eb{font-size:12px;letter-spacing:.2em;line-height:1.9;margin-bottom:22px;}
     .hero .hero-eb .br{display:block;}
     .hero .lede{font-size:17px;margin:28px auto 36px;}
     .btn{display:block;width:100%;max-width:380px;margin:0 auto;padding:18px 12px;font-size:11.5px;letter-spacing:.16em;}
@@ -148,6 +148,7 @@
   /* hero button: black with white outline (approved option B) */
   .hero .btn{background:#000;border-color:#fff;color:#fff;}
   .hero .btn:hover{background:#fff;color:#000;}
+  @media(max-width:380px){.hero .lede{font-size:15.5px;}}
 </style>
 </head>
 <body>
