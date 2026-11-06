@@ -45,7 +45,7 @@
   .nav img{height:26px;width:auto;}
 
   /* HERO — light rays, hero only */
-  .hero{position:relative;overflow:hidden;text-align:center;padding:170px 0 150px;border-bottom:1px solid var(--hair-d);}
+  .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(64px,9vh,120px) 0 clamp(56px,7vh,100px);border-bottom:1px solid var(--hair-d);}
   .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
     background:repeating-conic-gradient(from 0deg at 50% 118%,rgba(216,197,156,.13) 0deg .14deg,transparent .14deg 2.2deg);
     -webkit-mask-image:radial-gradient(120% 95% at 50% 118%,#000 15%,rgba(0,0,0,.55) 55%,transparent 88%);mask-image:radial-gradient(120% 95% at 50% 118%,#000 15%,rgba(0,0,0,.55) 55%,transparent 88%);}
@@ -59,7 +59,7 @@
 
   /* RESULTS */
   .results .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
-  .stat{text-align:center;padding:64px 20px;}
+  .stat{text-align:center;padding:44px 20px;}
   .stat+.stat{border-left:1px solid var(--hair-d);}
   .stat .n{font-size:64px;font-weight:800;letter-spacing:-.045em;line-height:1;}
   .stat .l{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:18px;}
@@ -114,14 +114,14 @@
   @media(max-width:900px){
     .wrap{padding:0 24px;}
     .nav .wrap{height:72px;} .nav img{height:22px;}
-    .hero{padding:96px 0 90px;}
+    .hero{padding:52px 0 46px;}
     .hero h1{font-size:44px;}
     .hero .hero-eb{font-size:12px;letter-spacing:.2em;line-height:1.9;margin-bottom:22px;}
     .hero .hero-eb .br{display:block;}
-    .hero .lede{font-size:17px;margin:28px auto 36px;}
+    .hero .lede{font-size:17px;margin:22px auto 28px;}
     .btn{display:block;width:100%;max-width:380px;margin:0 auto;padding:18px 12px;font-size:11.5px;letter-spacing:.16em;}
     .results .wrap{padding:0;}
-    .stat{padding:40px 8px;}
+    .stat{padding:28px 8px;}
     .stat .n{font-size:34px;}
     .stat .l span{display:block;}
     .stat .l{font-size:9px;letter-spacing:.14em;line-height:1.5;margin-top:12px;}
@@ -149,6 +149,14 @@
   .hero .btn{background:#000;border-color:#fff;color:#fff;}
   .hero .btn:hover{background:#fff;color:#000;}
   @media(max-width:380px){.hero .lede{font-size:15.5px;}}
+  /* keep the proof points above the fold on short laptop screens and small phones */
+  @media(min-width:901px) and (max-height:820px){
+    .hero{padding:48px 0 40px;} .hero h1{font-size:80px;} .hero .hero-eb{margin-bottom:22px;}
+    .hero .lede{margin:26px auto 32px;} .stat{padding:34px 20px;}
+  }
+  @media(max-width:900px) and (max-height:700px){
+    .hero{padding:36px 0 32px;} .hero h1{font-size:38px;} .hero .lede{margin:18px auto 22px;} .stat{padding:22px 8px;}
+  }
 </style>
 </head>
 <body>
